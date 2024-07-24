@@ -28,10 +28,6 @@ let index = 0;
 let imgOnScreen = document.querySelector(".banner-img");
 
 
-/*************/
-/* FUNCTIONS */
-/*************/
-
 /* Loop display dots */
 for (index = 0; index < slides.length; index++) {
 	let dot = document.createElement("div");
@@ -43,6 +39,10 @@ index = 0; // Reset index to 0
 parentElement.firstChild.classList.add("dot_selected"); // First dot is selected
 
 let tabDots = document.querySelectorAll(".dot");
+
+/*************/
+/* FUNCTIONS */
+/*************/
 
 /* Slide function */
 function doSlice (index) {
