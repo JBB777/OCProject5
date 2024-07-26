@@ -25,7 +25,7 @@ let text = document.querySelector("#banner p");
 let arrowLeft = document.querySelector(".arrow_left");
 let arrowRight = document.querySelector(".arrow_right");
 let index = 0;
-let imgOnScreen = document.querySelector(".banner-img");
+let imgDisplay = document.querySelector(".banner-img");
 
 
 /* Loop display dots */
@@ -47,7 +47,7 @@ let tabDots = document.querySelectorAll(".dot");
 /* Slide function */
 function doSlice (index) {
 	tabDots[index].classList.add('dot_selected');
-	imgOnScreen.src = './assets/images/slideshow/' + slides[index].image;
+	imgDisplay.src = `./assets/images/slideshow/${slides[index].image}`;
 	text.innerHTML = slides[index].tagLine;
 }
 
