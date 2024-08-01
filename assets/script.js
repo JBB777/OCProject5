@@ -45,7 +45,7 @@ let tabDots = document.querySelectorAll(".dot");
 /*************/
 
 /* Slide function */
-function doSlice (index) {
+function doSlide (index) {
 	tabDots[index].classList.add('dot_selected');
 	imgDisplay.src = `./assets/images/slideshow/${slides[index].image}`;
 	text.innerHTML = slides[index].tagLine;
@@ -61,25 +61,24 @@ function doSlice (index) {
 arrowLeft.addEventListener("click", () => {
 	tabDots[index].classList.remove("dot_selected");
 	if (index > 0) {
-		doSlice(index-1);
+		doSlide(index-1);
 		index-=1;
 	}
 	else {
-		doSlice(tabDots.length-1);
+		doSlide(tabDots.length-1);
 		index = tabDots.length-1;
 	}
-	
 });
 
 /* Right arrow */
 arrowRight.addEventListener("click", () => {
 	tabDots[index].classList.remove("dot_selected");
 	if (index < tabDots.length-1) {
-		doSlice(index+1);
+		doSlide(index+1);
 		index+=1;
 	}
 	else {
-		doSlice(0);
+		doSlide(0);
 		index = 0;
 	}
 });
